@@ -1,0 +1,229 @@
+﻿@keyframes wallpaper-drift {
+  from { filter: hue-rotate(0deg) saturate(1.05); }
+  to { filter: hue-rotate(18deg) saturate(1.2); }
+}
+
+@keyframes lock-time-in {
+  from { transform: translateY(34px) scale(1.08); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes notification-in {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes home-in {
+  from { transform: scale(.96); opacity: 0; filter: blur(10px); }
+  to { transform: scale(1); opacity: 1; filter: blur(0); }
+}
+
+@keyframes app-open {
+  from { transform: scale(.9); opacity: .55; border-radius: 40px; }
+  to { transform: scale(1); opacity: 1; border-radius: 0; }
+}
+
+@keyframes sheet-in {
+  from { transform: translateY(-34px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes progress-loop {
+  from { width: 18%; }
+  to { width: 86%; }
+}
+
+@keyframes wiggle {
+  from { transform: rotate(-1.5deg) translateY(0); }
+  to { transform: rotate(1.5deg) translateY(-1px); }
+}
+
+@keyframes haptic {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(-1px); }
+  70% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes liquid-glass-sheen {
+  0%, 46% { transform: translateX(0) rotate(22deg); opacity: 0; }
+  58% { opacity: .9; }
+  100% { transform: translateX(250%) rotate(22deg); opacity: 0; }
+}
+
+@keyframes siri-pulse {
+  0%, 100% {
+    transform: scale(.96);
+    opacity: .86;
+    filter: saturate(1);
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+    filter: saturate(1.18);
+  }
+}
+
+@keyframes notification-ios-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes notification-ios-out {
+  to {
+    opacity: 0;
+    transform: translateY(-10px) scale(.98);
+  }
+}
+
+@keyframes music-cover-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-18px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes music-text-fade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes haptic-message {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1.2px); }
+  55% { transform: translateX(1.2px); }
+}
+
+@keyframes haptic-call {
+  0%, 100% { transform: translateX(0); }
+  18% { transform: translateX(-2px); }
+  36% { transform: translateX(2px); }
+  54% { transform: translateX(-1.4px); }
+  72% { transform: translateX(1.4px); }
+}
+
+@keyframes control-ios-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes settings-page-in {
+  from {
+    opacity: .9;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes island-eq {
+  from { height: 7px; opacity: .55; }
+  to { height: 23px; opacity: 1; }
+}
+
+@keyframes app-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes passcode-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes face-scan {
+  0% {
+    opacity: 0;
+    transform: scale(.82);
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.22);
+  }
+}
+
+@keyframes passcode-shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-7px); }
+  40%, 60% { transform: translateX(7px); }
+}
+
+@keyframes passcode-unlock {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-110%);
+    filter: blur(10px);
+  }
+}
+
+@keyframes call-dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75%, 100% { content: "..."; }
+}
+
+@keyframes ios-app-in {
+  from {
+    opacity: 0;
+    transform: scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.haptic-message {
+  animation: haptic-message .22s ease-out;
+}
+
+.haptic-call {
+  animation: haptic-call .32s ease-out;
+}
+

@@ -1,0 +1,560 @@
+﻿.lock {
+  height: 100%;
+  padding: 82px 24px 28px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+}
+
+.lock-date,
+.app-subtitle,
+.small-muted {
+  color: var(--muted);
+}
+
+.lock-time {
+  margin: 0;
+  font-size: 82px;
+  line-height: 0.95;
+  font-weight: 800;
+  text-align: center;
+  animation: lock-time-in .55s cubic-bezier(.2,.9,.2,1);
+}
+
+.lock-date {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.notifications {
+  margin-top: 42px;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.lock-widgets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.mini-widget {
+  min-height: 58px;
+  border-radius: 18px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(20px);
+}
+
+.mini-widget span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.music-widget {
+  margin: 12px auto 0;
+  max-width: 280px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 22px;
+  padding: 12px;
+  background: rgba(0,0,0,.22);
+  backdrop-filter: blur(22px);
+}
+
+.music-widget strong,
+.music-widget span {
+  display: block;
+  text-align: center;
+}
+
+.music-widget span {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.music-progress {
+  height: 5px;
+  margin-top: 10px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(255,255,255,.18);
+}
+
+.music-progress i {
+  display: block;
+  width: 46%;
+  height: 100%;
+  border-radius: inherit;
+  background: white;
+  animation: progress-loop 5s linear infinite;
+}
+
+.notification,
+.widget,
+.control-tile,
+.app-card,
+.search,
+.modal-card {
+  border: 1px solid var(--line);
+  background: rgba(20, 24, 32, 0.42);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.16);
+}
+
+.notification {
+  border-radius: 22px;
+  padding: 13px 15px;
+  animation: notification-in .45s cubic-bezier(.2,.9,.2,1) both;
+}
+
+.notification strong {
+  display: block;
+  font-size: 14px;
+}
+
+.notification p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.lock-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.round-action {
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.34);
+  color: white;
+  font-weight: 800;
+}
+
+.unlock-hint {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.passcode-screen {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 18px;
+  padding: 72px 32px 30px;
+  color: white;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255,255,255,.14), transparent 25%),
+    rgba(8, 12, 20, .14);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  animation: passcode-in .34s cubic-bezier(.2,.9,.2,1);
+}
+
+.passcode-clock {
+  display: grid;
+  justify-items: center;
+}
+
+.passcode-clock .lock-time {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-size: 70px;
+  line-height: .95;
+}
+
+.passcode-clock .lock-date {
+  margin-bottom: 6px;
+}
+
+.passcode-auth {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.face-id-icon {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 14px;
+  border: 2px solid rgba(255,255,255,.72);
+  border-radius: 18px;
+  box-shadow: 0 0 28px rgba(255,255,255,.14);
+}
+
+.face-id-icon::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,.12);
+  opacity: 0;
+  animation: face-scan 1.05s ease-in-out infinite;
+}
+
+.face-id-icon span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.face-id-icon span:nth-child(1) { left: 16px; top: 18px; }
+.face-id-icon span:nth-child(2) { right: 16px; top: 18px; }
+.face-id-icon span:nth-child(3) { left: 20px; bottom: 15px; width: 22px; height: 2px; border-radius: 999px; }
+.face-id-icon span:nth-child(4) { left: 29px; top: 28px; width: 4px; height: 12px; border-radius: 999px; }
+
+.face-success .face-id-icon {
+  border-color: rgba(48,209,88,.92);
+  box-shadow: 0 0 34px rgba(48,209,88,.24);
+}
+
+.passcode-auth strong {
+  min-height: 28px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.passcode-auth small {
+  min-height: 20px;
+  margin: 5px 0 20px;
+  color: rgba(255,255,255,.64);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.passcode-dots {
+  display: flex;
+  gap: 14px;
+}
+
+.passcode-dots span {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.72);
+  background: rgba(255,255,255,.08);
+  transition: background .18s ease, transform .18s ease;
+}
+
+.passcode-dots .filled {
+  background: white;
+  transform: scale(1.08);
+}
+
+.passcode-dots.shake {
+  animation: passcode-shake .36s cubic-bezier(.36,.07,.19,.97);
+}
+
+.passcode-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 20px;
+  justify-items: center;
+}
+
+.passcode-keypad button {
+  width: 74px;
+  height: 74px;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 50%;
+  color: white;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.18), rgba(255,255,255,.08)),
+    rgba(255,255,255,.16);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.22),
+    0 10px 28px rgba(0,0,0,.10);
+}
+
+.passcode-keypad button strong {
+  display: block;
+  font-size: 31px;
+  line-height: 1;
+  font-weight: 420;
+}
+
+.passcode-keypad button small {
+  display: block;
+  min-height: 12px;
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .7px;
+}
+
+.passcode-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.passcode-bottom button {
+  border: 0;
+  color: rgba(255,255,255,.86);
+  background: transparent;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.ios-passcode.unlock-success {
+  animation: passcode-unlock .45s cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+/* iOS 26 inspired lockscreen */
+.ios-lock {
+  padding: 76px 28px 28px;
+  align-content: start;
+}
+
+.lock-hero {
+  display: grid;
+  justify-items: center;
+}
+
+.ios-lock .lock-date {
+  margin-bottom: 8px;
+  color: rgba(255,255,255,.72);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .1px;
+  text-transform: capitalize;
+}
+
+.ios-lock .lock-time {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: rgba(255,255,255,.94);
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  font-size: 94px;
+  line-height: .86;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: 0 10px 42px rgba(0,0,0,.24);
+}
+
+.lock-widget-stack {
+  align-self: start;
+  display: grid;
+  gap: 12px;
+  margin-top: 44px;
+}
+
+.lock-widget-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ios-widget {
+  min-width: 0;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 32px;
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(30px) saturate(1.35);
+  -webkit-backdrop-filter: blur(30px) saturate(1.35);
+  box-shadow:
+    0 12px 32px rgba(3,6,18,.12),
+    inset 0 1px 0 rgba(255,255,255,.20);
+  transition:
+    transform .3s ease,
+    opacity .3s ease,
+    backdrop-filter .3s ease,
+    background .3s ease;
+}
+
+.ios-widget:hover {
+  transform: scale(1.02);
+  background: rgba(255,255,255,.12);
+}
+
+.ios-widget:active {
+  transform: scale(.97);
+}
+
+.ios-lock .music-widget {
+  width: 100%;
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  align-items: center;
+  gap: 13px;
+  margin: 0;
+  max-width: none;
+  padding: 12px;
+  text-align: left;
+}
+
+.music-cover {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: white;
+  background:
+    radial-gradient(circle at 25% 18%, rgba(255,255,255,.42), transparent 28%),
+    linear-gradient(145deg, rgba(255,88,150,.76), rgba(97,138,255,.66) 52%, rgba(96,255,228,.32));
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.music-meta {
+  display: grid;
+  gap: 4px;
+}
+
+.ios-lock .music-widget strong,
+.ios-lock .music-widget small {
+  display: block;
+  text-align: left;
+}
+
+.ios-lock .music-widget small {
+  color: rgba(255,255,255,.60);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ios-lock .music-progress {
+  display: block;
+  height: 5px;
+  margin-top: 2px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(255,255,255,.16);
+}
+
+.ios-lock .music-progress b {
+  display: block;
+  width: 46%;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(255,255,255,.82);
+  animation: progress-loop 5s linear infinite;
+}
+
+.assistant-widget,
+.calendar-widget,
+.message-widget {
+  min-height: 82px;
+  padding: 14px;
+  text-align: left;
+}
+
+.assistant-widget {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.assistant-widget strong,
+.calendar-widget strong,
+.message-widget strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.assistant-widget small,
+.calendar-widget small,
+.message-widget small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255,255,255,.60);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.siri-orb {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255,255,255,.95), transparent 16%),
+    radial-gradient(circle at 64% 24%, rgba(95,221,255,.88), transparent 25%),
+    radial-gradient(circle at 28% 72%, rgba(255,75,160,.82), transparent 30%),
+    radial-gradient(circle at 75% 78%, rgba(148,105,255,.84), transparent 32%),
+    rgba(255,255,255,.20);
+  box-shadow: 0 0 22px rgba(139,154,255,.30);
+  animation: siri-pulse 2.6s ease-in-out infinite;
+}
+
+.calendar-widget span {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.message-widget {
+  min-height: 70px;
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  align-items: center;
+  gap: 11px;
+}
+
+.message-avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.16);
+  color: white;
+  font-weight: 800;
+}
+
+.ios-lock .lock-actions {
+  align-items: end;
+}
+
+.ios-lock .round-action {
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  backdrop-filter: blur(26px) saturate(1.35);
+  -webkit-backdrop-filter: blur(26px) saturate(1.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+.ios-lock .unlock-hint {
+  color: rgba(255,255,255,.72);
+  font-size: 12px;
+  font-weight: 700;
+}
+

@@ -1,0 +1,479 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-06-07T12:53:58.639Z",
+  "settings": {
+    "passcode": "1234",
+    "passcodeEnabled": true,
+    "passcodeLength": 4,
+    "faceIdEnabled": true,
+    "autoLock": "Immediatement",
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": true,
+    "airplane": false,
+    "notifications": true,
+    "sound": true,
+    "focus": false,
+    "focusMode": "",
+    "darkMode": false,
+    "reduceMotion": false,
+    "wallpaper": "Default",
+    "wallpaperUrl": "",
+    "wallpaperFit": "cover",
+    "brightness": 82,
+    "volume": 0,
+    "musicIndex": 0,
+    "musicPlaying": false
+  },
+  "notes": "Idees:\n- Booster le design\n- Tester Spotlight\n- Faire une vraie app mobile locale",
+  "messages": [
+    {
+      "from": "NOVA",
+      "body": "Interface premium chargee."
+    },
+    {
+      "from": "Mission Control",
+      "body": "2 objectifs ouverts."
+    },
+    {
+      "from": "Systeme",
+      "body": "Gestes, widgets et centre de controle actifs."
+    }
+  ],
+  "conversations": [
+    {
+      "id": "emma",
+      "contactId": "emma",
+      "contactName": "Emma Laurent",
+      "contactNumber": "+33 7 42 17 08 63",
+      "contactAvatar": "E",
+      "lastMessage": "J'ai envoye la maquette finale.",
+      "lastMessageAt": "2026-06-06T11:27:24.493Z",
+      "unreadCount": 1,
+      "pinned": false,
+      "muted": false,
+      "messages": [
+        {
+          "id": "m-emma-1",
+          "sender": "them",
+          "content": "Tu es dispo ce soir ?",
+          "createdAt": "2026-06-06T11:21:24.493Z",
+          "status": "read"
+        },
+        {
+          "id": "m-emma-2",
+          "sender": "me",
+          "content": "Oui, je finalise l'interface Messages.",
+          "createdAt": "2026-06-06T11:24:24.493Z",
+          "status": "read"
+        },
+        {
+          "id": "m-emma-3",
+          "sender": "them",
+          "content": "J'ai envoye la maquette finale.",
+          "createdAt": "2026-06-06T11:27:24.493Z",
+          "status": "delivered"
+        }
+      ]
+    },
+    {
+      "id": "lucas",
+      "contactId": "lucas",
+      "contactName": "Lucas Bernard",
+      "contactNumber": "+33 6 19 42 11 08",
+      "contactAvatar": "L",
+      "lastMessage": "Tu es dispo ce soir ?",
+      "lastMessageAt": "2026-06-06T10:57:24.493Z",
+      "unreadCount": 0,
+      "pinned": true,
+      "muted": false,
+      "messages": [
+        {
+          "id": "m-lucas-1",
+          "sender": "them",
+          "content": "Tu es dispo ce soir ?",
+          "createdAt": "2026-06-06T10:57:24.493Z",
+          "status": "delivered"
+        },
+        {
+          "id": "m-lucas-2",
+          "sender": "them",
+          "content": "On peut tester l'app iPhone ?",
+          "createdAt": "2026-06-06T10:59:24.493Z",
+          "status": "delivered"
+        }
+      ]
+    },
+    {
+      "id": "nova",
+      "contactId": "nova",
+      "contactName": "NOVA",
+      "contactNumber": "assistant.local",
+      "contactAvatar": "N",
+      "lastMessage": "Analyse locale terminee.",
+      "lastMessageAt": "2026-06-06T09:39:24.493Z",
+      "unreadCount": 0,
+      "pinned": false,
+      "muted": true,
+      "messages": [
+        {
+          "id": "m-nova-1",
+          "sender": "them",
+          "content": "Analyse locale terminee.",
+          "createdAt": "2026-06-06T09:39:24.493Z",
+          "status": "read"
+        },
+        {
+          "id": "m-nova-2",
+          "sender": "me",
+          "content": "Garde les donnees en BDD JSON.",
+          "createdAt": "2026-06-06T10:09:24.493Z",
+          "status": "read"
+        }
+      ]
+    }
+  ],
+  "autoReply": true,
+  "photos": [
+    "#0a84ff",
+    "#30d158",
+    "#ff9f0a",
+    "#bf5af2",
+    "#ff2d55",
+    "#111827",
+    "#5ac8fa",
+    "#ffd60a"
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "app": "Messages",
+      "appId": "messages",
+      "icon": "M",
+      "color": "#30d158",
+      "title": "Lucas",
+      "body": "Tu es dispo ce soir ?",
+      "time": "maintenant",
+      "unread": true,
+      "kind": "message"
+    },
+    {
+      "id": "n2",
+      "app": "Messages",
+      "appId": "messages",
+      "icon": "M",
+      "color": "#30d158",
+      "title": "Emma",
+      "body": "J'ai envoye la maquette finale.",
+      "time": "2 min",
+      "unread": true,
+      "kind": "message"
+    },
+    {
+      "id": "n3",
+      "app": "Calendrier",
+      "appId": "calendar",
+      "icon": "17",
+      "color": "#ffffff",
+      "darkIcon": true,
+      "title": "17:30",
+      "body": "Brief Design Premium",
+      "time": "8 min",
+      "unread": true,
+      "kind": "default"
+    },
+    {
+      "id": "n4",
+      "app": "NOVA",
+      "appId": "nova",
+      "icon": "AI",
+      "color": "#ff9f0a",
+      "title": "Assistant",
+      "body": "Analyse locale terminee.",
+      "time": "12 min",
+      "unread": true,
+      "kind": "default"
+    },
+    {
+      "id": "n5",
+      "app": "Discord",
+      "appId": "messages",
+      "icon": "D",
+      "color": "#5865f2",
+      "title": "Staff",
+      "body": "Support pret pour la demo.",
+      "time": "18 min",
+      "unread": true,
+      "kind": "default"
+    }
+  ],
+  "clock": {
+    "tab": "world",
+    "editingAlarmId": "",
+    "alarms": [
+      {
+        "id": "alarm-0730",
+        "time": "07:30",
+        "label": "Reveil",
+        "repeat": "Lun. Mar. Mer. Jeu. Ven.",
+        "sound": "Radar",
+        "vibration": "Standard",
+        "enabled": true
+      },
+      {
+        "id": "alarm-0845",
+        "time": "08:45",
+        "label": "Studio",
+        "repeat": "Tous les jours",
+        "sound": "Ondes",
+        "vibration": "Legere",
+        "enabled": true
+      },
+      {
+        "id": "alarm-1800",
+        "time": "18:00",
+        "label": "Brief",
+        "repeat": "Jamais",
+        "sound": "Carillon",
+        "vibration": "Aucune",
+        "enabled": false
+      }
+    ],
+    "stopwatch": {
+      "running": false,
+      "elapsed": 0,
+      "startedAt": null,
+      "laps": []
+    },
+    "timer": {
+      "running": false,
+      "duration": 300,
+      "remaining": 300,
+      "startedAt": null,
+      "endsAt": null,
+      "label": "Radar"
+    }
+  },
+  "racing": {
+    "status": "menu",
+    "score": 0,
+    "bestScore": 0,
+    "lane": 1,
+    "obstacles": [],
+    "speed": 3.98893684210538,
+    "spawnEvery": 754.1019999999778,
+    "lastSpawn": 50560.9,
+    "lastTick": 50860.9,
+    "pausedByExit": true
+  },
+  "camera": {
+    "mode": "video",
+    "facing": "back",
+    "flash": false,
+    "live": true,
+    "permission": true,
+    "galleryOpen": true,
+    "captureFlash": false,
+    "recording": false,
+    "recordingStartedAt": null,
+    "recordingElapsed": 2,
+    "photos": [],
+    "videos": [
+      {
+        "id": "video-1780833107348",
+        "color": "linear-gradient(145deg, #020617, #64748b 45%, #e0f2fe)",
+        "createdAt": "2026-06-07T11:51:47.348Z",
+        "duration": 2,
+        "kind": "video"
+      }
+    ]
+  },
+  "homeLayout": {
+    "page": "home",
+    "appOrder": [
+      "messages",
+      "calendar",
+      "photos",
+      "camera",
+      "mail",
+      "notes",
+      "clock",
+      "settings",
+      "store",
+      "wallet",
+      "maps",
+      "health",
+      "weather",
+      "calculator",
+      "nova",
+      "music",
+      "racing",
+      "phone",
+      "safari",
+      "reminders"
+    ],
+    "dock": [
+      "phone",
+      "messages",
+      "safari",
+      "music"
+    ],
+    "hiddenApps": [],
+    "widgets": [],
+    "iconTheme": "light",
+    "iconTint": "#0a84ff",
+    "iconSize": "small",
+    "widgetGalleryOpen": false,
+    "customizeOpen": false,
+    "confirm": null
+  },
+  "appStore": {
+    "tab": "today",
+    "query": "",
+    "selectedAppId": "",
+    "profileOpen": false,
+    "installedApps": [
+      "phone",
+      "messages",
+      "photos",
+      "camera",
+      "mail",
+      "notes",
+      "clock",
+      "settings",
+      "store",
+      "wallet",
+      "maps",
+      "health",
+      "weather",
+      "calculator",
+      "nova",
+      "music",
+      "safari",
+      "racing"
+    ],
+    "downloads": {},
+    "recentDownloads": []
+  },
+  "lastApps": [
+    "photos",
+    "camera",
+    "weather",
+    "racing"
+  ],
+  "openApps": [
+    {
+      "id": "photos",
+      "name": "Photos",
+      "lastOpenedAt": 1780833115103,
+      "snapshot": "App active",
+      "isRunning": true
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "lastOpenedAt": 1780833097309,
+      "snapshot": "App active",
+      "isRunning": true
+    },
+    {
+      "id": "weather",
+      "name": "Meteo",
+      "lastOpenedAt": 1780828940909,
+      "snapshot": "App active",
+      "isRunning": true
+    }
+  ],
+  "phoneTab": "recents",
+  "phoneDraft": "",
+  "musicState": {
+    "isPlaying": false,
+    "currentTrack": "blinding-lights",
+    "currentTime": 0,
+    "duration": 200,
+    "queue": [
+      "blinding-lights",
+      "nova-theme",
+      "midnight-city",
+      "golden-hour",
+      "levitating",
+      "night-drive"
+    ],
+    "volume": 0,
+    "repeat": false,
+    "shuffle": false,
+    "tab": "library",
+    "search": "",
+    "playerOpen": false
+  },
+  "musicLibrary": {
+    "tracks": [
+      {
+        "id": "blinding-lights",
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "album": "After Hours",
+        "duration": 200,
+        "cover": "BL",
+        "color": "#b91c3c",
+        "audioUrl": ""
+      },
+      {
+        "id": "nova-theme",
+        "title": "NOVA Theme",
+        "artist": "Synthwave local",
+        "album": "Local Sessions",
+        "duration": 186,
+        "cover": "NV",
+        "color": "#7c3aed",
+        "audioUrl": ""
+      },
+      {
+        "id": "midnight-city",
+        "title": "Midnight City",
+        "artist": "M83",
+        "album": "Hurry Up, We're Dreaming",
+        "duration": 244,
+        "cover": "MC",
+        "color": "#2563eb",
+        "audioUrl": ""
+      },
+      {
+        "id": "golden-hour",
+        "title": "Golden Hour",
+        "artist": "JVKE",
+        "album": "This Is What It Feels Like",
+        "duration": 209,
+        "cover": "GH",
+        "color": "#d97706",
+        "audioUrl": ""
+      },
+      {
+        "id": "levitating",
+        "title": "Levitating",
+        "artist": "Dua Lipa",
+        "album": "Future Nostalgia",
+        "duration": 203,
+        "cover": "LV",
+        "color": "#db2777",
+        "audioUrl": ""
+      },
+      {
+        "id": "night-drive",
+        "title": "Night Drive",
+        "artist": "Apple Park",
+        "album": "Cupertino Nights",
+        "duration": 221,
+        "cover": "ND",
+        "color": "#0f766e",
+        "audioUrl": ""
+      }
+    ]
+  },
+  "music": {
+    "index": 0,
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "playing": false
+  }
+}

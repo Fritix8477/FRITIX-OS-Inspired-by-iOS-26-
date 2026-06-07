@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emulator iPhone</title>
+  <link rel="stylesheet" href="style.css?v=20260607-2">
+</head>
+<body>
+  <main class="stage">
+    <section class="phone" aria-label="Emulateur iPhone">
+      <div class="metal-frame"></div>
+      <button class="side-button side-button-volume-up" id="side-volume-up" aria-label="Volume plus"></button>
+      <button class="side-button side-button-volume-down" id="side-volume-down" aria-label="Volume moins"></button>
+      <button class="side-button side-button-power" id="side-power" aria-label="Power"></button>
+      <div class="screen" id="screen">
+        <div class="wallpaper"></div>
+        <header class="statusbar">
+          <span id="status-time">9:41</span>
+          <span class="status-icons">Wi-Fi&nbsp;&nbsp;5G&nbsp;&nbsp;100%</span>
+        </header>
+        <div class="dynamic-island" id="dynamic-island" aria-label="Dynamic Island">
+          <span class="camera-dot"></span>
+          <span class="island-live-min"></span>
+        </div>
+        <div class="hardware-overlay" id="hardware-overlay" aria-live="polite"></div>
+        <div class="view" id="view"></div>
+        <button class="home-indicator" id="home-indicator" aria-label="Accueil"></button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/00-core.js?v=20260607-2"></script>
+  <script src="js/10-system-screens.js?v=20260606-22"></script>
+  <script src="js/20-app-renderers.js?v=20260607-2"></script>
+  <script src="js/30-overlays.js?v=20260606-22"></script>
+  <script src="js/40-utils.js?v=20260607-2"></script>
+  <script src="js/50-events.js?v=20260607-2"></script>
+</body>
+</html>

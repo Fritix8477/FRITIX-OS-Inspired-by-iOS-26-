@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-06-07T12:53:58.639Z",
+  "autoReply": true,
+  "conversations": [
+    {
+      "id": "emma",
+      "contactId": "emma",
+      "contactName": "Emma Laurent",
+      "contactNumber": "+33 7 42 17 08 63",
+      "contactAvatar": "E",
+      "lastMessage": "J'ai envoye la maquette finale.",
+      "lastMessageAt": "2026-06-06T11:27:24.493Z",
+      "unreadCount": 1,
+      "pinned": false,
+      "muted": false,
+      "messages": [
+        {
+          "id": "m-emma-1",
+          "sender": "them",
+          "content": "Tu es dispo ce soir ?",
+          "createdAt": "2026-06-06T11:21:24.493Z",
+          "status": "read"
+        },
+        {
+          "id": "m-emma-2",
+          "sender": "me",
+          "content": "Oui, je finalise l'interface Messages.",
+          "createdAt": "2026-06-06T11:24:24.493Z",
+          "status": "read"
+        },
+        {
+          "id": "m-emma-3",
+          "sender": "them",
+          "content": "J'ai envoye la maquette finale.",
+          "createdAt": "2026-06-06T11:27:24.493Z",
+          "status": "delivered"
+        }
+      ]
+    },
+    {
+      "id": "lucas",
+      "contactId": "lucas",
+      "contactName": "Lucas Bernard",
+      "contactNumber": "+33 6 19 42 11 08",
+      "contactAvatar": "L",
+      "lastMessage": "Tu es dispo ce soir ?",
+      "lastMessageAt": "2026-06-06T10:57:24.493Z",
+      "unreadCount": 0,
+      "pinned": true,
+      "muted": false,
+      "messages": [
+        {
+          "id": "m-lucas-1",
+          "sender": "them",
+          "content": "Tu es dispo ce soir ?",
+          "createdAt": "2026-06-06T10:57:24.493Z",
+          "status": "delivered"
+        },
+        {
+          "id": "m-lucas-2",
+          "sender": "them",
+          "content": "On peut tester l'app iPhone ?",
+          "createdAt": "2026-06-06T10:59:24.493Z",
+          "status": "delivered"
+        }
+      ]
+    },
+    {
+      "id": "nova",
+      "contactId": "nova",
+      "contactName": "NOVA",
+      "contactNumber": "assistant.local",
+      "contactAvatar": "N",
+      "lastMessage": "Analyse locale terminee.",
+      "lastMessageAt": "2026-06-06T09:39:24.493Z",
+      "unreadCount": 0,
+      "pinned": false,
+      "muted": true,
+      "messages": [
+        {
+          "id": "m-nova-1",
+          "sender": "them",
+          "content": "Analyse locale terminee.",
+          "createdAt": "2026-06-06T09:39:24.493Z",
+          "status": "read"
+        },
+        {
+          "id": "m-nova-2",
+          "sender": "me",
+          "content": "Garde les donnees en BDD JSON.",
+          "createdAt": "2026-06-06T10:09:24.493Z",
+          "status": "read"
+        }
+      ]
+    }
+  ]
+}

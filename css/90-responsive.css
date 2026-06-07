@@ -1,0 +1,22 @@
+@media (max-width: 920px) {
+  .stage {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stage {
+    padding: 0;
+  }
+
+  .phone {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .screen {
+    border-radius: 0;
+  }
+}

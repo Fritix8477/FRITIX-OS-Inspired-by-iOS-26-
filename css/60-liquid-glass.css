@@ -1,0 +1,579 @@
+﻿/* Liquid Glass system layer */
+.statusbar {
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.38);
+}
+
+.dynamic-island {
+  background:
+    radial-gradient(circle at 22% 12%, rgba(255,255,255,.14), transparent 26%),
+    linear-gradient(135deg, rgba(18, 24, 33, .82), rgba(0, 0, 0, .72));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(34px) saturate(1.4);
+  -webkit-backdrop-filter: blur(34px) saturate(1.4);
+  box-shadow:
+    0 13px 38px rgba(0,0,0,.32),
+    inset 0 1px 0 rgba(255,255,255,.16),
+    inset 0 -1px 0 rgba(255,255,255,.05);
+}
+
+.dynamic-island::before,
+.dock::before,
+.notification::before,
+.pro-widget::before,
+.app-card::before,
+.control-tile::before,
+.switcher-card::before,
+.spotlight::before,
+.notification-center::before,
+.app-header::before,
+.message-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.34), transparent 34%),
+    radial-gradient(circle at 78% 0%, rgba(255,255,255,.22), transparent 27%);
+  opacity: .55;
+  mix-blend-mode: screen;
+}
+
+.notification,
+.mini-widget,
+.music-widget,
+.search,
+.pro-widget,
+.dock,
+.control-tile,
+.switcher-card,
+.result-row,
+.message-bar,
+.tabbar button,
+.photo-tabs button,
+.round-action,
+.home-edit {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--liquid-border);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.28), rgba(255,255,255,.10) 46%, rgba(255,255,255,.18)),
+    var(--liquid-thin);
+  backdrop-filter: blur(30px) saturate(1.55);
+  -webkit-backdrop-filter: blur(30px) saturate(1.55);
+  box-shadow:
+    var(--liquid-shadow),
+    inset 0 1px 0 rgba(255,255,255,.58),
+    inset 0 -1px 0 rgba(0,0,0,.10);
+}
+
+.notification,
+.pro-widget,
+.control-tile,
+.switcher-card,
+.result-row,
+.app-card,
+.message-bar,
+.spotlight,
+.notification-center,
+.control-center,
+.switcher {
+  transform: translateZ(0);
+}
+
+.notification:hover,
+.pro-widget:hover,
+.control-tile:hover,
+.switcher-card:hover,
+.app-card:hover,
+.result-row:hover {
+  filter: brightness(1.06) saturate(1.05);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.lock-time {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 4px 18px 10px;
+  border-radius: 32px;
+  color: rgba(255,255,255,.92);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.20), rgba(255,255,255,.04)),
+    rgba(255,255,255,.08);
+  backdrop-filter: blur(24px) saturate(1.35);
+  -webkit-backdrop-filter: blur(24px) saturate(1.35);
+  border: 1px solid rgba(255,255,255,.16);
+  text-shadow: 0 14px 36px rgba(0,0,0,.28);
+}
+
+.notification {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.30), rgba(255,255,255,.10)),
+    rgba(12,18,28,.34);
+}
+
+.home-top,
+.home-widgets,
+.apps-grid,
+.dock,
+.page-dots {
+  position: relative;
+  z-index: 2;
+}
+
+.app-icon {
+  background-blend-mode: screen, normal;
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.20),
+    inset 0 1px 0 rgba(255,255,255,.42),
+    inset 0 -16px 26px rgba(0,0,0,.14);
+  overflow: hidden;
+  position: relative;
+}
+
+.app-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(255,255,255,.42), transparent 38%, rgba(255,255,255,.12));
+  pointer-events: none;
+}
+
+.dock {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255,255,255,.30), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,.34), rgba(255,255,255,.12)),
+    rgba(255,255,255,.20);
+}
+
+.app-screen {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.82), rgba(247,248,252,.72)),
+    rgba(247,248,252,.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.liquid-app {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(255,255,255,.58), transparent 30%),
+    radial-gradient(circle at 86% 18%, rgba(10,132,255,.14), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,.66), rgba(246,248,252,.44)),
+    rgba(246,248,252,.42) !important;
+  backdrop-filter: blur(30px) saturate(1.45) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(1.45) !important;
+}
+
+.liquid-app::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.42), transparent 32%),
+    radial-gradient(circle at 78% 0%, rgba(255,255,255,.24), transparent 28%);
+  opacity: .65;
+  mix-blend-mode: screen;
+}
+
+.liquid-app > * {
+  position: relative;
+  z-index: 1;
+}
+
+.app-header {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.74), rgba(255,255,255,.36)),
+    rgba(255,255,255,.36);
+  border-bottom: 1px solid rgba(15,23,42,.08);
+  backdrop-filter: blur(26px) saturate(1.35);
+  -webkit-backdrop-filter: blur(26px) saturate(1.35);
+}
+
+.liquid-app .app-header {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.58), rgba(255,255,255,.24)),
+    rgba(255,255,255,.28) !important;
+  border-bottom: 1px solid rgba(255,255,255,.44);
+  box-shadow:
+    0 10px 28px rgba(15,23,42,.07),
+    inset 0 1px 0 rgba(255,255,255,.84);
+  backdrop-filter: blur(32px) saturate(1.45) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(1.45) !important;
+}
+
+.liquid-app .app-content {
+  background: transparent !important;
+}
+
+.app-header button,
+.primary,
+.input-row input,
+textarea,
+.calc-keys button,
+.dialer button {
+  border: 1px solid rgba(255,255,255,.42);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.82), rgba(255,255,255,.52)),
+    rgba(255,255,255,.50);
+  backdrop-filter: blur(20px) saturate(1.25);
+  -webkit-backdrop-filter: blur(20px) saturate(1.25);
+  box-shadow:
+    0 10px 24px rgba(15,23,42,.08),
+    inset 0 1px 0 rgba(255,255,255,.84);
+}
+
+.primary {
+  color: white;
+  background:
+    linear-gradient(145deg, rgba(10,132,255,.92), rgba(10,132,255,.62)),
+    rgba(10,132,255,.64);
+}
+
+.app-card {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(255,255,255,.62);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.78), rgba(255,255,255,.46)),
+    rgba(255,255,255,.58);
+  backdrop-filter: blur(26px) saturate(1.35);
+  -webkit-backdrop-filter: blur(26px) saturate(1.35);
+  box-shadow:
+    0 16px 34px rgba(15,23,42,.10),
+    inset 0 1px 0 rgba(255,255,255,.88);
+}
+
+.liquid-app .app-card,
+.liquid-app textarea,
+.liquid-app .input-row input,
+.liquid-app .message-bar,
+.liquid-app .bubble,
+.liquid-app .tabbar button,
+.liquid-app .photo-tabs button,
+.liquid-app .calc-keys button,
+.liquid-app .dialer button,
+.liquid-app .settings-row {
+  border: 1px solid rgba(255,255,255,.56) !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.72), rgba(255,255,255,.34)),
+    rgba(255,255,255,.42) !important;
+  backdrop-filter: blur(26px) saturate(1.35) !important;
+  -webkit-backdrop-filter: blur(26px) saturate(1.35) !important;
+  box-shadow:
+    0 14px 32px rgba(15,23,42,.10),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+.liquid-app .primary,
+.liquid-app .bubble.mine,
+.liquid-app .calc-keys .op {
+  background:
+    linear-gradient(145deg, rgba(10,132,255,.86), rgba(10,132,255,.46)),
+    rgba(10,132,255,.50) !important;
+  color: white !important;
+}
+
+.liquid-app .calc-keys .dark {
+  background:
+    linear-gradient(145deg, rgba(31,41,55,.82), rgba(31,41,55,.48)),
+    rgba(31,41,55,.48) !important;
+  color: white !important;
+}
+
+.control-center,
+.switcher,
+.spotlight,
+.notification-center {
+  background:
+    radial-gradient(circle at 25% 10%, rgba(255,255,255,.24), transparent 34%),
+    linear-gradient(180deg, rgba(13, 18, 28, .54), rgba(13, 18, 28, .30));
+  backdrop-filter: blur(38px) saturate(1.55);
+  -webkit-backdrop-filter: blur(38px) saturate(1.55);
+}
+
+.control-tile {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.32), rgba(255,255,255,.12)),
+    rgba(255,255,255,.18);
+}
+
+.control-tile.active {
+  background:
+    linear-gradient(145deg, rgba(10,132,255,.70), rgba(10,132,255,.30)),
+    rgba(10,132,255,.34);
+}
+
+.slider-fill {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.54) 36%, rgba(10,132,255,.70)),
+    rgba(255,255,255,.40);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 8px 18px rgba(10,132,255,.22);
+}
+
+.spotlight input {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.78), rgba(255,255,255,.44)),
+    rgba(255,255,255,.50);
+  border: 1px solid rgba(255,255,255,.56);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+}
+
+.bubble {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.80), rgba(255,255,255,.50)),
+    rgba(255,255,255,.56);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.64);
+}
+
+.bubble.mine {
+  background:
+    linear-gradient(145deg, rgba(10,132,255,.88), rgba(10,132,255,.56)),
+    rgba(10,132,255,.58);
+}
+
+.wallet-card,
+.album-art,
+.weather-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.28);
+  backdrop-filter: blur(22px) saturate(1.35);
+  -webkit-backdrop-filter: blur(22px) saturate(1.35);
+  box-shadow:
+    0 18px 44px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.44);
+}
+
+.light-context .statusbar {
+  color: rgba(15,23,42,.76);
+  text-shadow: 0 1px 10px rgba(255,255,255,.44);
+}
+
+.light-context .dynamic-island {
+  background:
+    linear-gradient(135deg, rgba(20, 24, 33, .78), rgba(0,0,0,.66)),
+    rgba(0,0,0,.58);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .notification,
+  .pro-widget,
+  .dock,
+  .app-card,
+  .control-tile,
+  .switcher-card,
+  .spotlight,
+  .notification-center,
+  .app-screen {
+    transition:
+      transform .34s cubic-bezier(.2,.9,.16,1.15),
+      opacity .28s cubic-bezier(.2,.9,.2,1),
+      filter .28s cubic-bezier(.2,.9,.2,1),
+      background .34s cubic-bezier(.2,.9,.2,1);
+  }
+}
+
+/* Final lightweight Liquid Glass pass */
+.ios-widget,
+.ios-home .search,
+.ios-home .home-edit,
+.ios-home .dock,
+.ios-lock .round-action {
+  border-color: rgba(255,255,255,.15) !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.105), rgba(255,255,255,.045)),
+    rgba(255,255,255,.08) !important;
+  backdrop-filter: blur(30px) saturate(1.35) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(1.35) !important;
+  box-shadow:
+    0 12px 32px rgba(3,6,18,.12),
+    inset 0 1px 0 rgba(255,255,255,.18) !important;
+}
+
+.ios-widget::before,
+.ios-home .search::before,
+.ios-home .home-edit::before,
+.ios-home .dock::before,
+.ios-lock .round-action::before {
+  opacity: .26;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.30), transparent 32%),
+    radial-gradient(circle at 76% 0%, rgba(255,255,255,.18), transparent 26%);
+}
+
+.ios-widget:hover,
+.ios-home .search:hover,
+.ios-home .home-edit:hover,
+.ios-lock .round-action:hover {
+  transform: scale(1.02);
+  filter: none;
+}
+
+.ios-widget:active,
+.ios-home .search:active,
+.ios-home .home-edit:active,
+.ios-lock .round-action:active {
+  transform: scale(.97);
+}
+
+.ios-lock .lock-time,
+.ios-lock .lock-time:hover {
+  transform: none;
+  filter: none;
+}
+
+.ios-home .weather-widget,
+.ios-home .battery-widget {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.045)),
+    rgba(255,255,255,.08) !important;
+}
+
+.ios-notification,
+.ios-notification:hover {
+  border-color: rgba(255,255,255,.12) !important;
+  background: rgba(255,255,255,.08) !important;
+  backdrop-filter: blur(40px) saturate(1.35) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(1.35) !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,.12) !important;
+  filter: none !important;
+}
+
+.ios-notification:hover {
+  transform: scale(1.01);
+}
+
+.ios-notification.show-actions:hover {
+  transform: none;
+}
+
+.lock-music-player,
+.lock-music-player:hover {
+  background: rgba(255,255,255,.10) !important;
+  backdrop-filter: blur(45px) saturate(1.35) !important;
+  -webkit-backdrop-filter: blur(45px) saturate(1.35) !important;
+}
+
+.ios-control-center,
+.ios-control-center:hover {
+  background: rgba(20,20,30,.42) !important;
+  backdrop-filter: blur(55px) saturate(1.8) !important;
+  -webkit-backdrop-filter: blur(55px) saturate(1.8) !important;
+}
+
+.ios-control-center .control-glass,
+.ios-control-center .quick-control {
+  border-color: rgba(255,255,255,.12) !important;
+  background: rgba(255,255,255,.10) !important;
+  backdrop-filter: blur(30px) saturate(1.45) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(1.45) !important;
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.18) !important;
+}
+
+.ios-control-center .control-bubble.active,
+.ios-control-center .quick-control.active {
+  background: rgba(10,132,255,.34) !important;
+}
+
+.screen.dark-system .wallpaper {
+  filter: brightness(.62) saturate(.82);
+}
+
+.screen.dark-system .ios-home .app-icon {
+  filter: saturate(.86) brightness(.9);
+}
+
+.liquid-app:has(.ios-settings),
+.liquid-app:has(.ios-settings) .app-content,
+.liquid-app:has(.ios-settings) .ios-settings {
+  background: #f2f2f7 !important;
+}
+
+.liquid-app:has(.ios-settings) .settings-row,
+.liquid-app:has(.ios-settings) .settings-row:hover,
+.liquid-app:has(.ios-settings) .ios-settings-profile,
+.liquid-app:has(.ios-settings) .ios-settings-group {
+  border: 0 !important;
+  background: white !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.phone-call-mode,
+.liquid-app.phone-call-mode {
+  background:
+    radial-gradient(circle at 50% 16%, rgba(52,199,89,.18), transparent 28%),
+    linear-gradient(160deg, #151923 0%, #05070c 62%, #10131d 100%) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.phone-call-mode::before {
+  display: none !important;
+}
+
+.phone-call-mode .app-content,
+.liquid-app.phone-call-mode .app-content {
+  position: relative !important;
+  z-index: 20 !important;
+  height: 100% !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #05070c !important;
+}
+
+.liquid-app.phone-call-mode .phone-call-screen,
+.liquid-app.phone-call-mode .app-content > .phone-call-screen {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: stretch !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  padding: 78px 28px 48px !important;
+  color: #fff !important;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(52,199,89,.20), transparent 24%),
+    radial-gradient(circle at 20% 72%, rgba(10,132,255,.20), transparent 32%),
+    linear-gradient(160deg, #151923 0%, #05070c 62%, #10131d 100%) !important;
+}
+
+.liquid-app.phone-call-mode .call-backdrop {
+  z-index: 0 !important;
+}
+
+.liquid-app.phone-call-mode .call-identity,
+.liquid-app.phone-call-mode .call-controls,
+.liquid-app.phone-call-mode .incoming-actions,
+.liquid-app.phone-call-mode .hangup {
+  position: relative !important;
+  z-index: 3 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.liquid-app.phone-call-mode .call-controls {
+  display: grid !important;
+}
+
